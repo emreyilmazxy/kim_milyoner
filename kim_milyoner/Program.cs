@@ -21,14 +21,18 @@ Console.WriteLine(@" 2-) Dünya'ya en yakın gezegen hangisidir ?
           A-) MARS   B-)MERKÜR ");
 string answer2 = Console.ReadLine().ToLower().Trim();
 
+//eğer iki soruda yanlış cevap ise bu if bloğu çalışır 
 if (((answer2 == "mars" || answer2 == "a" ) && counter == 0))
 {
 
     Console.WriteLine("üzgünüz yarışmayı kazanamadınız");
     return;
 }
+//ilk soru doğru cevaplandıysa veya 2 inci soru doğruysa if yapısının içine girer 
+
 else if (((answer2 == "merkür" || answer2 == "b") || counter == 1))
 {
+    //ilk ve 2. soru soru olduğunda çalışır else if bloğunun içindedir. 
     if (((answer2 == "merkür" || answer2 == "b") && counter == 1))
     {
         Console.WriteLine("tebrikler 1 milyon TL kazandınız");
